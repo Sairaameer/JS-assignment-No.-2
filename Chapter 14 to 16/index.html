@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--Q1.Declare an empty array using JS literal notation to store student names in future.--> 
+<script>
+//var studentsNames=[];
+
+</script>
+<!--Q2.Declare an empty array using JS object notation to store student names in future.--> 
+<script>
+var cities=[];
+cities[0]="Karachi",
+cities[1]="Lahore",
+cities[2]="Pishawar",
+cities[3]="Mansehra",
+</script>
+<!--Q3.Declare and initialize a strings array.-->
+<script>
+
+ fruits = ["Apple" , "Banana" , "Orange"];
+ console.log(fruits);
+
+</script>
+<!--Q4.Declare and initialize a numbers array.-->
+
+<script>
+var numbers= [5, 10, 20];
+console.log(numbers);
+</script>
+
+<!--Q5.Declare and initialize a boolean array.-->
+
+<script>
+var booleans= [true , false];
+console.log(booleans);
+</script>
+
+<!--Q6.Declare and initialize a mixed array.-->
+
+<script>
+
+ var mixArray= ["J.is Pakistan's number" , 1 ,"brand", true];   
+ console.log(mixArray);
+
+</script>
+
+<!--Q7.Declare and initialize an array and store available 
+    education qualifications in Pakistan(e.g. SSC, HSC, BCS, BS, BCOM, MS, M.fil., phD). 
+    Show the listed qualifications in your browser like:-->
+<script>
+
+//Declare and initialize the array with education qualifications in Pakistan
+var educationQualifications = ["SSC", "HSC", "BCS", "BS", "BCOM", "MS", "MPhil", "PhD"];
+
+// Display the listed qualifications
+document.write("<h1>Qualifications</h1>");
+document.write("<ol>");
+for(var i = 0; i < educationQualifications.length; i++) {
+    document.write("<li>" + educationQualifications[i] + "</li>");
+}
+document.write("</ul>");
+
+</script>
+
+<!--Q8.Write a program to store 3 student names in an array. 
+Take another array to store score of these three students.
+assume that total marks are 500 for each student, display
+the scores & percentages of students like: -->
+<script>
+
+ // Define the arrays for student names and scores
+var students = ["Michael", "John", "Tony"];
+var scores = [320, 230, 480];
+var totalMarks = 500;
+
+// Calculate and display scores and percentages
+var output = "";
+
+for (var i = 0; i < students.length; i++) {
+    var studentName = students[i];
+    var score = scores[i];
+    var percentage = (score / totalMarks) * 100;
+    
+    output += "Score of " + studentName + " is: " + score + ". Percentage: " + percentage.toFixed(2) + "%<br>";
+}
+
+// Display the result
+document.write(output);
+
+</script>
+
+<!--Q9.Initialize an array with color names.
+ Display the array element in your browser.
+a. Ask the user what color he/she wants to add to the 
+beginning & add that color to the beginning of the array.
+Display the updated array in your browser.
+b.Ask the user what color he/she wants to add to the 
+end & add that color to the end of the array.
+Display the updated array in your browser.
+c.Add two more color to the beginning of the array.
+Display the updated array in your browser.
+d. Delete the first color in the array.
+Display the updated array in your browser.
+e.Delete the last color in the array.
+Display the updated array in your browser.
+f. Ask the user at which index he/she wants to add a color 
+& color name. Then add the color to desired position /index. 
+Display the updated array in your browser. 
+g. Ask the user at which index he/she wants to delete
+color(s) & how many colors he/she wants to delete. Then
+remove the same number of color(s) from user-defined 
+position/index. Display the updated array in your browser.-->
+<script>
+var colors= ["Red, Orange, Green, Blue, Yellow, Purple,"];
+console.log(colors);
+//a)
+var addColor1= prompt("Add what color do you want to add to the beginning of the arry");
+colors.unshift(addColor1);
+console.log(colors);
+//b)
+var addColor2= prompt("Add what color do you want to add to the end of the array");
+colors.push(addColor2);
+console.log(colors);
+//c)
+
+colors.unshift("White", "Black");
+console.log(colors);
+ //d)
+ colors.shift();
+ console.log(colors);
+ //e)
+ var removedElement= colors.pop();
+ console.log(colors);
+ console.log(removedElement);
+ //f)
+ var addIndex= prompt("At which index do you want to add color?");
+ addIndex= parseInt(addIndex);
+ var newElement= prompt("Please enter the color");
+ colors.splice(addIndex, 0, newElement);
+ console.log(colors);
+ //g)
+ var delIndex= prompt("At which index do you want to delete color?");
+delIndex= parseInt(delIndex);
+colors.splice(delIndex, 0, delElement);
+console.log(colors);
+colors.splice(delIndex);
+console.log(colors);
+</script>
+<!--Q10. Write a program to store student scores in an array &
+sort the array in assending order using Arrays sort method.-->
+<script>
+var studentScores= [320, 230, 480, 120];
+console.log("Score of students:" , studentScores);
+var studentS= studentScores.sort((a, b) => a - b);
+
+console.log("Orderd scores of students:", studentS);
+
+</script>
+<!--Q11. Write a program to initialize an array with city names.
+Copy 3 array elements from cities array to selectedCities array.-->
+
+<script>
+
+// Initialize the cities array with city names
+var cities =["Karachi", "Lahore", "Islamabad", "Quetta", "Peshawar", "Multan", "Faisalabad"];
+
+// Create an empty array to hold the selected cities
+var selectedCities = [];
+
+// Copy 3 elements from cities array to selectedCities array
+for (var i = 0; i < 3; i++) {
+    selectedCities.push(cities[i]);
+}
+
+// Print the selected cities
+console.log("Selected Cities: ", selectedCities);
+
+</script>
+<!--Q12. Write a program to create a single string from the
+below mentioned array:
+var arr= ["This","is","my","cat"];
+(Use array's join method)-->
+
+<script>
+
+var arr= ["This", "is", "my", "cat"];
+var singleString= arr.join(" ");
+console.log(singleString);
+
+</script>
+
+<!--Q13. Create a new array. Store values one by one in such a way
+that you can access the values in the order in which they
+were stored. (FIFO-First In First Out) -->
+<script>
+// Initialize an empty array to act as a queue
+var queue = [];
+
+// Adding elements to the queue (FIFO - First In First Out)
+queue.push(10);
+queue.push(20);
+queue.push(30);
+
+// Accessing and removing elements from the queue in FIFO order
+console.log(queue.shift()); // Removes and returns 10
+console.log(queue.shift()); // Removes and returns 20
+console.log(queue.shift()); // Removes and returns 30
+
+// The queue is now empty
+console.log(queue); // []
+
+// Adding more elements to the queue
+queue.push(40);
+queue.push(50);
+
+// Accessing and removing elements again in FIFO order
+console.log(queue.shift()); // Removes and returns 40
+console.log(queue.shift()); // Removes and returns 50
+
+// The queue is empty again
+console.log(queue); // []
+
+</script>
+<!--Q14.Create a new array. Store values one by one in such a way 
+that you can access the values in reverse order. (Last In-First Out)-->
+<script>
+// Initialize an empty array to act as a stack
+var stack = [];
+
+// Adding elements to the stack (Last In)
+stack.push(10);
+stack.push(20);
+stack.push(30);
+
+// Accessing and removing elements from the stack (First Out)
+console.log(stack.pop()); // Removes and returns 30
+console.log(stack.pop()); // Removes and returns 20
+console.log(stack.pop()); // Removes and returns 10
+
+// The stack is now empty
+console.log(stack); // []
+
+</script>
+<!--Q15. Write a program to store phone manufacturers(Apple,
+Samsung, Motorola, Nokia, Sony & Haier)in an array.
+Display the following dropdown/select menu in your 
+browser using document.write()method:-->
+<script>
+    
+// Array of phone manufacturers
+var manufacturers = ["Apple", "Samsung", "Motorola", "Nokia", "Sony", "Haier"];
+
+// Start the HTML for the select menu
+var html = '<select name="phones">';
+
+// Loop through the manufacturers and create an option for each
+for (var i = 0; i < manufacturers.length; i++) {
+    html += '<option value="' + manufacturers[i] + '">' + manufacturers[i] + '</option>';
+}
+
+// Close the select tag
+html += '</select>';
+
+// Display the dropdown menu on the page
+document.write(html);
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,177 @@
++<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--Q1.Write a program that takes a character(number or string) in a variable & checks 
+  whether the given inputis a number, uppercase letter or lower case latter. 
+  (Hint:AsCII codes:A-65,Z-90,a-97,z-122). -->
+
+<script>
+var input = prompt("Enter a character: ");
+var asciiCode = input.charCodeAt(0);
+
+var result;
+
+if (asciiCode >= 48 && asciiCode <= 57) {
+    result = "The given input is a number.";
+} else if (asciiCode >= 65 && asciiCode <= 90) {
+    result = "The given input is an uppercase letter.";
+} else if (asciiCode >= 97 && asciiCode <= 122) {
+    result = "The given input is a lowercase letter.";
+} else {
+    result = "The given input is neither a number nor a letter.";
+}
+
+document.write(result);
+</script>
+
+<!--Q2.Write a jawaScript program that accept two integers and display the larger.
+Also show if the two integers are equal.-->
+<script>
+var num1 = prompt("Enter the first integer: ");
+var num2 = prompt("Enter the second integer: ");
+
+num1 = parseInt(num1);
+num2 = parseInt(num2);
+
+var result;
+
+if (num1 > num2) {
+    result = "The larger number is: " + num1;
+} else if (num2 > num1) {
+    result = "The larger number is: " + num2;
+} else {
+    result = "Both numbers are equal.";
+}
+
+document.write(result);
+
+</script>
+<!--Q3.Write a program that takes input a number from user & state  whether the number is positive,
+ negative or zero.-->
+<script>
+
+var number = prompt("Enter a number: ");
+
+number = parseFloat(number);
+
+var result;
+
+if (number > 0) {
+    result = "The number is positive.";
+} else if (number < 0) {
+    result = "The number is negative.";
+} else {
+    result = "The number is zero.";
+}
+
+document.write(result);
+
+</script>
+
+<!--Q4.Write a program that takes a character (i.e string of length1)
+and returns true if it is a vowel, false otherwise.-->
+<script>
+ var vowel1="a";   
+  var vowel2="e";
+  var vowel3="i";   
+  vowel4="o";  
+ var vowel5="u";
+var userClick =prompt("Enter any Character");   
+if(userClick==vowel1,+ vowel2,+ vowel3,+ vowel4,+ vowel5){
+console.log("True");
+}else{
+console.log("False");
+}var char = prompt("Enter a character: ");
+
+var vowels = "aeiouAEIOU";
+var isVowel;
+
+if (vowels.indexOf(char) !== -1) {
+    isVowel = true;
+} else {
+    isVowel = false;
+}
+
+document.write("Is the character a vowel? " + isVowel);
+
+
+</script>
+<!--Q5.Write a program that 
+//a. Store correct password in a JS variable.
+//b. Asks user to enter his/her password.
+//c. Validate the two passwords:
+ i.  Check if user has entered password. If not, then
+given message "Please enter your password" 
+ii.  Check if both passwords are same. If they are 
+same, show message "Correct! The password you
+entered matches the original password". Show 
+"incorrect password" otherwise.-->
+<script>
+var originalPassword= 1122 
+var user =prompt("Enter your password");
+ if(user==originalPassword){
+  alert("Correct! The password you entered matches the original password");
+}else if(user!==originalPassword){
+alert("incorrect password");
+ }else{
+alert("Please enter your password");
+  }
+
+    </script>
+
+<!--Q6.This if/else statement does not work. Try to fix it:
+var greeting;
+hour =13
+if(hour < 18){
+= "Good day"
+ else
+ greeting= "Good evening";
+}-->
+  <script>
+
+var greeting;
+var hour= 13
+if(hour<18){
+ alert("Good day");
+}
+else
+alert("Good evening");
+
+  </script>  
+<!--Q7.Write a program that takes time as input from user in 24 hours 
+//clock format like: 1900-7pm. Implement the following case using if,
+// else & else if statements.-->
+<script>
+  
+var time = prompt("Enter the time in 24-hour format (e.g., 1900 for 7 PM): ");
+
+var hour = parseInt(time.substring(0, 2));
+var minute = parseInt(time.substring(2, 4));
+
+var message;
+
+if (hour >= 0 && hour < 6) {
+    message = "It's early morning.";
+} else if (hour >= 6 && hour < 12) {
+    message = "It's morning.";
+} else if (hour >= 12 && hour < 18) {
+    message = "It's afternoon.";
+} else if (hour >= 18 && hour < 24) {
+    message = "It's evening.";
+} else {
+    message = "Invalid time format.";
+}
+
+document.write(message);
+
+</script>
+
+
+</body>
+</html>
